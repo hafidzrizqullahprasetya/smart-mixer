@@ -11,7 +11,7 @@ app = Flask(__name__,
 app.config['SECRET_KEY'] = 'secret!'
 app.config['DEBUG'] = True
 
-# Inisialisasi instance ConcreteQualityMonitor
+# Inisialisasi instance ConcreteQualityMonitor INFOOO KAKAKK
 concrete_monitor = ConcreteQualityMonitor()
 
 # Hubungkan Flask dengan SocketIO
