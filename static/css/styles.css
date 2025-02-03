@@ -1,0 +1,511 @@
+/* Main Layout Styles */
+.status-normal {
+  color: #28a745; /* Green color for normal status */
+}
+.status-warning {
+  color: #ffc107; /* Yellow color for warning status */
+}
+.status-danger {
+  color: #dc3545; /* Red color for danger/error status */
+}
+/* Header & Navigation */
+body {
+  padding-top: 70px;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Alert Container */
+#alertContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.custom-alert {
+  padding: 15px 25px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: white;
+  min-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.5s ease-out;
+}
+
+.custom-alert button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 0 0 15px;
+}
+
+.alert-success {
+  background-color: #28a745;
+}
+
+.alert-error {
+  background-color: #dc3545;
+}
+
+.alert-info {
+  background-color: #17a2b8;
+}
+
+.alert-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Simulation History Styles */
+.simulation-history {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.simulation-item {
+  padding: 15px;
+  border-left: 4px solid #007bff;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.simulation-item:hover {
+  background-color: #e9ecef;
+  transform: translateX(5px);
+}
+
+.simulation-time {
+  color: #6c757d;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.simulation-details {
+  margin: 10px 0;
+}
+
+.simulation-actions {
+  margin-top: 10px;
+}
+
+/* Calendar Styles */
+.calendar-container {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.calendar-day.has-simulation {
+  background-color: #007bff;
+  color: white;
+}
+
+.simulation-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Dashboard Grid Layout */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Card Styles */
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Notification Styles */
+.additive-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 1000;
+  animation: fadeIn 0.5s;
+}
+
+/* History Section Styles */
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Styling untuk tombol skema suhu */
+.temp-scheme-btn {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+/* Warna untuk setiap skema */
+.temp-scheme-high {
+  background: #dc3545;
+}
+
+.temp-scheme-low {
+  background: #0d6efd;
+}
+
+.temp-scheme-normal {
+  background: #198754;
+}
+
+/* Styling untuk tombol aktif */
+.temp-scheme-btn.active {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+/* Style untuk radio buttons yang disembunyikan */
+.temp-scheme-radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Recommendations Panel Styles */
+.recommendations-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.recommendation-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.recommendation-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+/* Tambahkan di styles.css yang sudah ada */
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.btn-logout {
+  padding: 8px 15px;
+  background-color: #dc3545;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-logout:hover {
+  background-color: #c82333;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.countdown {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  font-weight: bold;
+  color: white;
+  z-index: 10000;
+  text-align: center;
+  animation: pulse 1s infinite;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.countdown-text {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  z-index: 10000;
+  text-align: center;
+  width: 100%;
+}
+
+.history-table {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.history-table table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.history-table th,
+.history-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.history-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.status-danger {
+  color: #dc3545 !important;
+  font-weight: bold;
+}
+
+.status-normal {
+  color: #28a745 !important;
+}
+
+.simulation-item {
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.simulation-item:hover {
+  background-color: #f8f9fa;
+}
+
+.simulation-item:not(:last-child) {
+  border-bottom: 1px solid #dee2e6;
+}
+
+#simulationList {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.temp-scheme-radio {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.temp-scheme-btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  transition: transform 0.2s;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.temp-scheme-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.temp-scheme-high {
+  background-color: #dc3545;
+}
+
+.temp-scheme-low {
+  background-color: #0d6efd;
+}
+
+.temp-scheme-normal {
+  background-color: #198754;
+}
+
+#selectedScheme {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+@media (max-width: 576px) {
+  .d-flex {
+    flex-direction: column;
+  }
+
+  .temp-scheme-btn {
+    width: 100%;
+    height: 60px;
+  }
+}
+
+.alert-info {
+  background-color: rgba(13, 202, 240, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Tambahkan ini */
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center; /* Tambahkan ini */
+}
+
+.alert-info i {
+  color: #0dcaf0;
+  font-size: 1rem;
+}
+
+.alert-info small {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 8px;
+  line-height: 1.4;
+}

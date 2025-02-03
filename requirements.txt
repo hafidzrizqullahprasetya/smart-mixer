@@ -1,0 +1,6 @@
+Flask==2.3.3
+python-socketio==5.8.0
+flask-socketio==5.3.4
+python-engineio==4.5.1
+functools32==3.2.3-2; python_version < "3.0"
+
