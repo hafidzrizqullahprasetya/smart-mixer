@@ -6,7 +6,7 @@ import socketio
 app = Flask(__name__)
 app.secret_key = 'kunci_rahasia_anda'
 
-# Load users dari JSON
+# Load users dari JSON INI TESSS
 def load_users():
     try:
         with open('users.json', 'r') as file:
